@@ -66,3 +66,4 @@
 */*.db
 */database.db-journal
 */generated/prisma
+/back-end/.idea/

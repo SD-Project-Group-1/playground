@@ -1,5 +1,10 @@
 const db = require('../config/db');
 
-const get_all_devices = async ()=>{
+const getAllDevices = (callback) => {
+    db.query('SELECT * FROM devices', (err, results) => {
+        if (err) return callback(err);
+        callback(null, results);
+    });
+};
 
-}
+module.exports = { getAllDevices };
